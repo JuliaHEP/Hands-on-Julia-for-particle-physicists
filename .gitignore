@@ -25,5 +25,6 @@ docs/site/
 
 # Editor and temporary files from Jupyter notebooks / Jupyterbook
 .vscode
-.ipynb_checkpoints
+*/.ipynb_checkpoints
 julia-intro/docs/_build
+Manifest.toml
