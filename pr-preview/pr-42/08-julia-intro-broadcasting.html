@@ -507,10 +507,10 @@ For example, making use of the Julia “ImageShow” package family to naturally
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Cyan">[ Info: </span>Precompiling ImageCore [a09fc81d-aa75-5fe9-8630-4744c3626534] 
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3709] signal 2: Interrupt
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3747] signal 2: Interrupt
 in expression starting at none:0
-unknown function (ip: 0x7f3b5da98d6f)
-unknown function (ip: 0x7f3b5da9e7a2)
+unknown function (ip: 0x7f6b75c98d6f)
+unknown function (ip: 0x7f6b75c9e7a2)
 uv_thread_join at /workspace/srcdir/libuv/src/unix/thread.c:294
 add_output&lt;jl_dump_native_impl(void*, char const*, char const*, char const*, char const*, ios_t*, ios_t*, jl_emission_params_t*)::&lt;lambda(llvm::Module&amp;)&gt; &gt; at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/aotcompile.cpp:1487
 operator()&lt;jl_dump_native_impl(void*, char const*, char const*, char const*, char const*, ios_t*, ios_t*, jl_emission_params_t*)::&lt;lambda(llvm::Module&amp;)&gt; &gt; at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/aotcompile.cpp:1647 [inlined]
@@ -519,11 +519,11 @@ ijl_write_compiler_output at /cache/build/tester-amdci4-12/julialang/julia-relea
 ijl_atexit_hook at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/init.c:285
 jl_repl_entrypoint at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/jlapi.c:1060
 main at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/cli/loader_exe.c:58
-unknown function (ip: 0x7f3b5da2a1c9)
+unknown function (ip: 0x7f6b75c2a1c9)
 __libc_start_main at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
 unknown function (ip: 0x4010b8)
 unknown function (ip: (nil))
-Allocations: 35692624 (Pool: 35690434; Big: 2190); GC: 24
+Allocations: 35692292 (Pool: 35690101; Big: 2191); GC: 24
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">InterruptException</span>:
@@ -728,7 +728,7 @@ By Graeme A Stewart, Samuel Skipsey
 
   <p class="copyright">
     
-      © Copyright CERN, The Contributors 2025.
+      © Copyright CERN, The Contributors 2023-2025.
       <br/>
     
   </p>

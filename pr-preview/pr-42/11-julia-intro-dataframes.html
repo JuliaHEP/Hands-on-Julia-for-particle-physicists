@@ -467,39 +467,24 @@ document.write(`
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Cyan">[ Info: </span>Precompiling DataFrames [a93c6f00-e57d-5684-b7b6-d8193f3e46c0] 
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4106] signal 2: Interrupt
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4108] signal 2: Interrupt
 in expression starting at /home/runner/.julia/packages/DataFrames/kcA9R/src/DataFrames.jl:14
 epoll_pwait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+
+[4287] signal 2: Interrupt
+in expression starting at /home/runner/.julia/packages/SentinelArrays/vt8A6/src/SentinelArrays.jl:3
 uv__io_poll at /workspace/srcdir/libuv/src/unix/linux.c:1404
 uv_run at /workspace/srcdir/libuv/src/unix/core.c:430
 ijl_task_get_next at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/scheduler.c:522
-
-[4269] signal 2: Interrupt
-in expression starting at /home/runner/.julia/packages/SentinelArrays/vt8A6/src/SentinelArrays.jl:455
-jl_gc_alloc_ at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/julia_internal.h:523 [inlined]
-jl_new_uninitialized_datatype at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/datatype.c:98
-inst_datatype_inner at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/jltypes.c:2132
-jl_apply_tuple_type_v_ at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/jltypes.c:2299 [inlined]
-ijl_apply_tuple_type_v at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/jltypes.c:2309
-intersect_tuple at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/subtype.c:3749
-intersect at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/subtype.c:4202
-intersect_unionall_ at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/subtype.c:3369
-intersect_unionall at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/subtype.c:3460
-intersect at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/subtype.c:4188
-intersect_all at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/subtype.c:4344
+jl_datatype_layout at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/julia.h:1338 [inlined]
+do_apply at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/builtins.c:675
+vect at ./array.jl:185
+jl_apply at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/julia.h:2157 [inlined]
+do_apply at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/builtins.c:831
+_internal_node_to_Expr at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/base/JuliaSyntax/src/expr.jl:238
 poptask at ./task.jl:1012
-jl_type_intersection_env_s at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/subtype.c:4592
-jl_typemap_intersection_node_visitor at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/typemap.c:543
-jl_typemap_intersection_visitor at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/typemap.c:807
-jl_typemap_intersection_visitor at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/typemap.c:809
-jl_typemap_intersection_memory_visitor at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/typemap.c:500
-jl_typemap_intersection_visitor at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/typemap.c:780
-ml_mtable_visitor at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/gf.c:3347 [inlined]
-ml_matches at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/gf.c:3724
-ml_matches at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/gf.c:3639 [inlined]
-ijl_matching_methods at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/gf.c:2336
-wait at ./task.jl:1021
-#wait#733 at ./condition.jl:130
+#114 at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/base/JuliaSyntax/src/expr.jl:488
+#build_tree#46 at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/base/JuliaSyntax/src/parse_stream.jl:1061
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">InterruptException</span>:
@@ -559,6 +544,173 @@ wait at ./task.jl:1021
     <span class="o">@</span> <span class="o">./</span><span class="n">essentials</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1086</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
  <span class="p">[</span><span class="mi">27</span><span class="p">]</span> <span class="n">require</span><span class="p">(</span><span class="n">into</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">mod</span><span class="p">::</span><span class="n">Symbol</span><span class="p">)</span>
     <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">2260</span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>wait at ./task.jl:1021
+build_tree at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/base/JuliaSyntax/src/parse_stream.jl:1013 [inlined]
+#build_tree#113 at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/base/JuliaSyntax/src/expr.jl:472
+build_tree at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/base/JuliaSyntax/src/expr.jl:465 [inlined]
+core_parser_hook at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/base/JuliaSyntax/src/hooks.jl:233
+#wait#733 at ./condition.jl:130
+wait at ./condition.jl:125 [inlined]
+wait at ./process.jl:694
+wait at ./process.jl:687 [inlined]
+success at ./process.jl:556
+jfptr_core_parser_hook_76014.1 at /opt/hostedtoolcache/julia/1.11.6/x64/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/julia.h:2157 [inlined]
+jl_f__call_in_world at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/builtins.c:894
+jl_apply at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/julia.h:2157 [inlined]
+do_apply at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/builtins.c:831
+#invoke_in_world#3 at ./essentials.jl:1089
+jl_apply at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/julia.h:2157 [inlined]
+do_apply at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/builtins.c:831
+invoke_in_world at ./essentials.jl:1086
+jl_apply at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/julia.h:2157 [inlined]
+do_apply at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/builtins.c:831
+invoke_fixedworld#117 at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/base/JuliaSyntax/src/hooks.jl:118
+jl_apply at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/julia.h:2157 [inlined]
+do_apply at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/builtins.c:831
+invoke_fixedworld at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/base/JuliaSyntax/src/hooks.jl:117
+_parse_string at ./meta.jl:198
+#parseall#6 at ./meta.jl:292 [inlined]
+parseall at ./meta.jl:291 [inlined]
+include_string at ./loading.jl:2720
+_include at ./loading.jl:2794
+include at ./Base.jl:562 [inlined]
+include_package_for_output at ./loading.jl:2881
+jfptr_success_67827.1 at /opt/hostedtoolcache/julia/1.11.6/x64/lib/julia/sys.so (unknown line)
+jfptr_include_package_for_output_72197.1 at /opt/hostedtoolcache/julia/1.11.6/x64/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/julia.h:2157 [inlined]
+do_call at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/interpreter.c:126
+eval_value at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/interpreter.c:223
+eval_stmt_value at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/interpreter.c:174 [inlined]
+eval_body at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/interpreter.c:666
+jl_interpret_toplevel_thunk at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/interpreter.c:824
+jl_toplevel_eval_flex at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/toplevel.c:943
+jl_toplevel_eval_flex at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/toplevel.c:886
+ijl_toplevel_eval_in at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/toplevel.c:994
+#compilecache#1121 at ./loading.jl:3082
+compilecache at ./loading.jl:3038
+compilecache at ./loading.jl:3038
+unknown function (ip: 0x7fbc76cfef5d)
+eval at ./boot.jl:430 [inlined]
+include_string at ./loading.jl:2734
+include_string at ./loading.jl:2744 [inlined]
+exec_options at ./client.jl:321
+#1110 at ./loading.jl:2579
+#mkpidlock#7 at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/FileWatching/src/pidfile.jl:95
+unknown function (ip: 0x7fbc76cfe943)
+_start at ./client.jl:531
+jfptr__start_73597.1 at /opt/hostedtoolcache/julia/1.11.6/x64/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/julia.h:2157 [inlined]
+true_main at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/jlapi.c:900
+jl_repl_entrypoint at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/jlapi.c:1059
+main at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/cli/loader_exe.c:58
+unknown function (ip: 0x7f9e0242a1c9)
+__libc_start_main at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+unknown function (ip: 0x4010b8)
+unknown function (ip: (nil))
+Allocations: 1 (Pool: 1; Big: 0); GC: 0
+mkpidlock at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/FileWatching/src/pidfile.jl:92
+#mkpidlock#6 at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/FileWatching/src/pidfile.jl:90 [inlined]
+mkpidlock at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/FileWatching/src/pidfile.jl:90
+jfptr_mkpidlock_44824.1 at /opt/hostedtoolcache/julia/1.11.6/x64/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/julia.h:2157 [inlined]
+do_apply at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/builtins.c:831
+#trymkpidlock#11 at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/FileWatching/src/pidfile.jl:116
+jl_apply at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/julia.h:2157 [inlined]
+do_apply at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/builtins.c:831
+trymkpidlock at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/usr/share/julia/stdlib/v1.11/FileWatching/src/pidfile.jl:114
+jl_apply at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/julia.h:2157 [inlined]
+jl_f__call_latest at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/builtins.c:875
+#invokelatest#2 at ./essentials.jl:1057 [inlined]
+invokelatest at ./essentials.jl:1052 [inlined]
+#maybe_cachefile_lock#1131 at ./loading.jl:3698
+maybe_cachefile_lock at ./loading.jl:3695 [inlined]
+_require at ./loading.jl:2565
+__require_prelocked at ./loading.jl:2388
+jfptr___require_prelocked_71260.1 at /opt/hostedtoolcache/julia/1.11.6/x64/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/julia.h:2157 [inlined]
+jl_f__call_in_world at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/builtins.c:894
+#invoke_in_world#3 at ./essentials.jl:1089 [inlined]
+invoke_in_world at ./essentials.jl:1086 [inlined]
+_require_prelocked at ./loading.jl:2375
+macro expansion at ./loading.jl:2314 [inlined]
+macro expansion at ./lock.jl:273 [inlined]
+__require at ./loading.jl:2271
+jfptr___require_71191.1 at /opt/hostedtoolcache/julia/1.11.6/x64/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/julia.h:2157 [inlined]
+jl_f__call_in_world at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/builtins.c:894
+#invoke_in_world#3 at ./essentials.jl:1089 [inlined]
+invoke_in_world at ./essentials.jl:1086 [inlined]
+require at ./loading.jl:2260
+jfptr_require_71188.1 at /opt/hostedtoolcache/julia/1.11.6/x64/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/julia.h:2157 [inlined]
+call_require at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/toplevel.c:486 [inlined]
+eval_import_path at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/toplevel.c:523
+jl_toplevel_eval_flex at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/toplevel.c:812
+jl_eval_module_expr at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/toplevel.c:215 [inlined]
+jl_toplevel_eval_flex at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/toplevel.c:743
+jl_toplevel_eval_flex at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/toplevel.c:886
+ijl_toplevel_eval_in at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/toplevel.c:994
+eval at ./boot.jl:430 [inlined]
+include_string at ./loading.jl:2734
+_include at ./loading.jl:2794
+include at ./Base.jl:562 [inlined]
+include_package_for_output at ./loading.jl:2881
+jfptr_include_package_for_output_72155.1 at /opt/hostedtoolcache/julia/1.11.6/x64/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/julia.h:2157 [inlined]
+do_call at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/interpreter.c:126
+eval_value at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/interpreter.c:223
+eval_stmt_value at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/interpreter.c:174 [inlined]
+eval_body at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/interpreter.c:666
+jl_interpret_toplevel_thunk at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/interpreter.c:824
+jl_toplevel_eval_flex at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/toplevel.c:943
+jl_toplevel_eval_flex at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/toplevel.c:886
+ijl_toplevel_eval_in at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/toplevel.c:994
+eval at ./boot.jl:430 [inlined]
+include_string at ./loading.jl:2734
+include_string at ./loading.jl:2744 [inlined]
+exec_options at ./client.jl:321
+_start at ./client.jl:531
+jfptr__start_73597.1 at /opt/hostedtoolcache/julia/1.11.6/x64/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/julia.h:2157 [inlined]
+true_main at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/jlapi.c:900
+jl_repl_entrypoint at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/jlapi.c:1059
+main at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/cli/loader_exe.c:58
+unknown function (ip: 0x7fbc7f22a1c9)
+__libc_start_main at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+unknown function (ip: 0x4010b8)
+unknown function (ip: (nil))
+Allocations: 1 (Pool: 1; Big: 0); GC: 0
+val already in a list
+atexit hook threw an error: ErrorException(&quot;schedule: Task not runnable&quot;)
+error at ./error.jl:35
+#schedule#763 at ./task.jl:884
+schedule at ./task.jl:876 [inlined]
+uv_writecb_task at ./stream.jl:1200
+jfptr_uv_writecb_task_67047.1 at /opt/hostedtoolcache/julia/1.11.6/x64/lib/julia/sys.so (unknown line)
+jlcapi_uv_writecb_task_67510.1 at /opt/hostedtoolcache/julia/1.11.6/x64/lib/julia/sys.so (unknown line)
+uv__write_callbacks at /workspace/srcdir/libuv/src/unix/stream.c:926
+uv__stream_io at /workspace/srcdir/libuv/src/unix/stream.c:1227
+uv__run_pending at /workspace/srcdir/libuv/src/unix/core.c:824
+uv_run at /workspace/srcdir/libuv/src/unix/core.c:420
+ijl_task_get_next at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/scheduler.c:522
+poptask at ./task.jl:1012
+wait at ./task.jl:1021
+uv_write at ./stream.jl:1081
+unsafe_write at ./stream.jl:1154
+unsafe_write at ./io.jl:452 [inlined]
+write at ./strings/io.jl:248 [inlined]
+print at ./strings/io.jl:250
+unknown function (ip: 0x7fbc76d08066)
+showerror at ./errorshow.jl:152
+unknown function (ip: 0x7fbc76d07fa6)
+_atexit at ./initdefs.jl:454
+jfptr__atexit_69554.1 at /opt/hostedtoolcache/julia/1.11.6/x64/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/julia.h:2157 [inlined]
+ijl_atexit_hook at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/init.c:271
+jl_exit_thread0_cb at /cache/build/tester-amdci4-12/julialang/julia-release-1-dot-11/src/signals-unix.c:517
 </pre></div>
 </div>
 </div>
@@ -5018,7 +5170,7 @@ By Graeme A Stewart, Samuel Skipsey
 
   <p class="copyright">
     
-      © Copyright CERN, The Contributors 2025.
+      © Copyright CERN, The Contributors 2023-2025.
       <br/>
     
   </p>
