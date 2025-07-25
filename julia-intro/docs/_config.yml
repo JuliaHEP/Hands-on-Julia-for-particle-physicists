@@ -3,7 +3,7 @@
 
 title: Introduction to Julia
 author: Graeme A Stewart, Samuel Skipsey
-copyright: "CERN, The Contributors 2025"
+copyright: "CERN, The Contributors 2023-2025"
 logo: images/juliaheplogo.png
 
 # Force re-execution of notebooks on each build.
