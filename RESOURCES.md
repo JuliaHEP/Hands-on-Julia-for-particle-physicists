@@ -24,7 +24,7 @@ concepts.
 | Introducing Julia| wikibook | website | [link](https://en.wikibooks.org/wiki/Introducing_Julia) |
 | Julia X in Y| one-file tutorial* | website | [link](https://learnxinyminutes.com/docs/julia/) |
 
-(*) The used Julia version is somewhat outdated, but the concepts presented there are really close in v1.9 (the current stable).
+(*) The used Julia version is somewhat outdated, but the basic concepts are still the same.
 
 
 ## Special topics

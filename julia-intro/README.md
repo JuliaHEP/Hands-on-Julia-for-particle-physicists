@@ -6,4 +6,4 @@ The set of notebooks can also be processed by [Jupyter Book](https://jupyterbook
 
 - The `environment.yaml` file can be used by conda/mamba to setup the appropriate set of Python packages to do this.
 
-Licenced CC-BY-4.0, Copyright © 2023 Sam Skipsey, CERN and other contributors
+Licenced CC-BY-4.0, Copyright © 2023-2025 Sam Skipsey, CERN and other contributors
