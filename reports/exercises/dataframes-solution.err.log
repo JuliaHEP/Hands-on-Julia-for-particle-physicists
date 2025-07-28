@@ -27,11 +27,11 @@ Traceback (most recent call last):
                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/home/runner/micromamba/envs/julia-intro/lib/python3.12/site-packages/nbclient/client.py", line 856, in _async_handle_timeout
     raise CellTimeoutError.error_from_timeout_and_cell(
-nbclient.exceptions.CellTimeoutError: A cell timed out while it was being executed, after 30 seconds.
+nbclient.exceptions.CellTimeoutError: A cell timed out while it was being executed, after 300 seconds.
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-using DataFrames
-using CSV
+@df signal scatter(:PRI_tau_eta, :PRI_tau_phi, alpha=0.4, label="Signal")
+@df background scatter!(:PRI_tau_eta, :PRI_tau_phi, alpha=0.4, label="Background")
 -------------------
 

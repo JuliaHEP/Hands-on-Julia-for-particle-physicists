@@ -27,10 +27,18 @@ Traceback (most recent call last):
                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/home/runner/micromamba/envs/julia-intro/lib/python3.12/site-packages/nbclient/client.py", line 856, in _async_handle_timeout
     raise CellTimeoutError.error_from_timeout_and_cell(
-nbclient.exceptions.CellTimeoutError: A cell timed out while it was being executed, after 30 seconds.
+nbclient.exceptions.CellTimeoutError: A cell timed out while it was being executed, after 300 seconds.
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-using Plots, LaTeXStrings #if you didn't install it already, you would need to use Pkg to add Plots first
+using CairoMakie
+CairoMakie.activate!()
+
+fig = Makie.Figure()
+_, cont = Makie.contourf(fig[1,1],x,x,heights, colormap=:inferno) 
+Makie.Colorbar(fig[1,2], cont)  #adding figure "subplots" happens automatically when we specify a new position - Makie sizes them appropriately
+_, surf =Makie.surface(fig[1,3], x,x,heights, colormap=:Pastel1_3)
+Makie.Colorbar(fig[1,4], surf)
+fig
 -------------------
 
